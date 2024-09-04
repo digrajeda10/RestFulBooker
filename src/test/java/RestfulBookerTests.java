@@ -26,7 +26,7 @@ public class RestfulBookerTests {
 
     @Test
     public void obtenerReservaPorId() {
-        int bookingId = 1; // Asumiendo que este ID existe
+        int bookingId = 3; // Asumiendo que este ID existe
         Response response = helper.getBookingById(bookingId);
         response.then().assertThat().statusCode(200);
         // Verificar que los campos no sean nulos
@@ -53,7 +53,7 @@ public class RestfulBookerTests {
     @Test
     public void obtenerReservasConFiltros() {
         String firstName = "Sally";
-        String lastName = "Brown";
+        String lastName = "Wilson";
         Response response = helper.getBookingsWithFilters(firstName, lastName);
         response.then().assertThat().statusCode(200);
         // Verificar que la respuesta contenga un 'bookingid'

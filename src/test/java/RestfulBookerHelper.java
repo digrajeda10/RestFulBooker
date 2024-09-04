@@ -5,7 +5,6 @@ import io.restassured.response.Response;
 
 public class RestfulBookerHelper {
 
-    // Constructor que configura la URL base y registra un parser para manejar respuestas en texto plano
     public RestfulBookerHelper() {
         RestAssured.baseURI = "https://restful-booker.herokuapp.com";
         RestAssured.registerParser("text/plain", Parser.TEXT);
